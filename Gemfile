@@ -7,6 +7,7 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 gem 'haml-rails'
+gem 'carrierwave'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,22 +23,14 @@ end
 
 group :test, :development do
   gem "rspec-rails", "~> 2.11.0"
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-rails'
+end
+
+group :test do
+  gem "shoulda-matchers"
 end
 
 gem 'igc', path: '/Users/bcb/Documents/dev/ruby/igc'
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
