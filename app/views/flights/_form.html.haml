@@ -1,4 +1,4 @@
-= form_for @flight do |f|
+= form_for @flight, html: {multipart: true} do |f|
   - if @flight.errors.any?
     #error_explanation
       %h2= "#{pluralize(@flight.errors.count, "error")} prohibited this flight from being saved:"
@@ -8,6 +8,6 @@
 
   .field
     = f.label :logfile
-    = f.text_field :logfile
+    = f.file_field :logfile
   .actions
     = f.submit 'Save'
