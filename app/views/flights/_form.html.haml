@@ -1,0 +1,13 @@
+= form_for @flight do |f|
+  - if @flight.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@flight.errors.count, "error")} prohibited this flight from being saved:"
+      %ul
+        - @flight.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :logfile
+    = f.text_field :logfile
+  .actions
+    = f.submit 'Save'
