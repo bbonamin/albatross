@@ -9,7 +9,7 @@ gem 'pg'
 gem 'haml-rails'
 gem 'carrierwave'
 gem "mongoid", "~> 3.0.0"
-
+gem 'tenacity'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
