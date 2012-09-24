@@ -15,6 +15,7 @@ class FlightsController < ApplicationController
   def show
     @flight = Flight.find(params[:id])
 
+    @flight_lat_long = FlightPath.where(flight_id: @flight.id).to_json
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @flight }
